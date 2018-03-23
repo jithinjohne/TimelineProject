@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DraftMonth.cs" />
+    <Compile Include="PlanHolding.cs" />
     <Compile Include="PlanSchedule.cs" />
     <Compile Include="TimelineBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -36,6 +36,28 @@ namespace TimelineProject
                 }
             }
 
+            //Skips
+            var planHoldings = _planSchedule.PlanHoldings;
+            var planHoldingsCount = planHoldings.Count;
+            foreach (var month in timelineDraftMonths)
+            {
+                var skips = planHoldings.Where(x => x.SkipMonths.Contains((DraftMonth)month.Month));
+                var skipCount = skips.Count();
+                if (skipCount > 0)
+                {
+                    if (skipCount == planHoldingsCount)
+                    {
+                        //Full skip
+                    }
+                    else
+                    {
+                        //Partial skip
+                        var partialSkipHoldings = skips.Select(x => x.Name);
+                    }
+                    
+                }
+            }
+
         }
     }
 }
